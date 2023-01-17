@@ -1,4 +1,5 @@
 import React from 'react'
+import Box from './Box'
 
 const Home = () => {
   return (
@@ -7,7 +8,9 @@ const Home = () => {
         <h2>Express yourself</h2>
         <p>Say a thousand words with one picture</p>
     </div>
-    <div></div>
+    <div>
+        <Box />
+    </div>
     </div>
    
   )

@@ -33,7 +33,7 @@ const Box = () => {
         </div>
       </div>
 
-      <div>
+      <div className="section-3">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga similique
         illum eum fugit nostrum saepe facilis quaerat asperiores nisi ex,
         deserunt at odit recusandae corporis voluptas. Odio placeat velit sit!

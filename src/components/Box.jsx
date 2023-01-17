@@ -1,6 +1,6 @@
 import React from "react";
 import { FaHeartBroken } from "react-icons/fa";
-import { BsBookmark } from "react-icons/bs";
+import { BsBookmarkFill } from "react-icons/bs";
 import { AiOutlineHeart } from "react-icons/ai";
 import { CiAt } from "react-icons/ci";
 import "./Box.css";
@@ -21,15 +21,16 @@ const Box = () => {
       </div>
 
       <div className="section-2">
-        <div>
-          <FaHeartBroken /> <BsBookmark />
+        <div className="left">
+          <div><FaHeartBroken className="icon" /></div>
+          <div><BsBookmarkFill className="icon" /></div> 
         </div>
         <div>
           <img className="post" src={Post} alt="post"/>
         </div>
         <div>
-          <AiOutlineHeart />
-          <CiAt />
+          <div><AiOutlineHeart className="icon" /></div>
+          <div><CiAt className="icon" /></div>
         </div>
       </div>
 

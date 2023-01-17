@@ -36,6 +36,16 @@
     box-sizing: border-box;
 }
 
+.left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.icon {
+    color: #FFFFFF;
+}
+
 .section-3 {
     width: 30rem;
     height: 5rem;

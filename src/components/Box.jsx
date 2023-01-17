@@ -1,8 +1,7 @@
 import React from "react";
 import { FaHeartBroken } from "react-icons/fa";
-import { BsBookmarkFill } from "react-icons/bs";
-import { AiOutlineHeart } from "react-icons/ai";
-import { CiAt } from "react-icons/ci";
+import { BsBookmarkFill, BsHeartFill } from "react-icons/bs";
+import { BiAt } from "react-icons/bi";
 import "./Box.css";
 import Profile from '../Images/profile.png';
 import Post from '../Images/post.png';
@@ -28,9 +27,9 @@ const Box = () => {
         <div>
           <img className="post" src={Post} alt="post"/>
         </div>
-        <div>
-          <div><AiOutlineHeart className="icon" /></div>
-          <div><CiAt className="icon" /></div>
+        <div className="left">
+          <div><BsHeartFill className="icon" /></div>
+          <div><BiAt className="icon" /></div>
         </div>
       </div>
 

@@ -24,11 +24,16 @@
     height: 10rem;
     background: #031F41;
     box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
 }
 
 .post {
     width: 20rem;
-    height: 8rem;
+    height: 10rem;
+    box-sizing: border-box;
 }
 
 .section-3 {

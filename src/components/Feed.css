@@ -1,0 +1,61 @@
+img {
+  vertical-align: top;
+}
+
+#mainFeed {
+  margin: 100px;
+}
+
+.trending {
+  display: flex;
+  padding: 20px !important;
+  border: 1px solid #031f41;
+  max-width: 1000px;
+  border-radius: 10px;
+}
+.trending .trendingBox {
+  width: 200px;
+}
+.trending .tag {
+  margin-top: 20px;
+}
+
+.container {
+  margin: 50px auto;
+  max-width: 600px;
+}
+
+.post {
+  margin-bottom: 30px;
+  border: 1px solid #031f41;
+  border-radius: 10px;
+}
+.post .postHeader {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #031f41;
+}
+.post .postHeader .profile {
+  margin-right: 10px;
+}
+.post .postHeader .profile img {
+  width: 50px;
+}
+.post .postBody {
+  background-color: #031f41;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.post .contents {
+  padding: 10px;
+  border-top: 1px solid #031f41;
+  text-align: left;
+}
+
+@media all and (max-width: 950px) {
+  #mainFeed {
+    margin: 5vw;
+  }
+}

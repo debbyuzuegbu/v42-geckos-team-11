@@ -2,8 +2,27 @@ import "./Feed.css";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import { Navigation, Mousewheel } from "swiper";
+import Card from "./UI/Card";
 
 export default function Feed() {
+  const demo = [
+    {
+      profileImg: "../images/icons/profile.jpg",
+      userID: "Evelyn Jonas",
+      locaation: "somewhere",
+      cardImg: "../images/post1.png",
+      contents: "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+    },
+    {
+      profileImg: "../images/icons/profile.jpg",
+      userID: "Evelyn Jonas",
+      locaation: "somewhere",
+      cardImg: "../images/post2.png",
+      contents:
+        "Consectetur explicabo sint, tenetur officia atque veniam quia iste nobis eius quos eveniet? Nisi eligendi exercitationem fuga accusantiumassumenda qui quibusdam voluptas.",
+    },
+  ];
+
   return (
     <section id="mainFeed">
       <Swiper className="trending" modules={[Navigation, Mousewheel]} spaceBetween={20} navigation mousewheel slidesPerView={"auto"}>
@@ -40,43 +59,9 @@ export default function Feed() {
       </Swiper>
 
       <div className="container">
-        <div className="post">
-          <div className="postHeader">
-            <div className="profile">
-              <img src="../images/icons/profile.jpg" alt="" />
-            </div>
-            <div className="userID">Evelyn Jonas</div>
-            <div className="location"></div>
-          </div>
-          <div className="postBody">
-            <div className="leftBar"></div>
-            <div className="postImg">
-              <img src="../images/post1.png" alt="" />
-            </div>
-            <div className="rightBar"></div>
-          </div>
-          <div className="contents">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
-        </div>
-        <div className="post">
-          <div className="postHeader">
-            <div className="profile">
-              <img src="../images/icons/profile.jpg" alt="" />
-            </div>
-            <div className="userID">Evelyn Jonas</div>
-            <div className="location"></div>
-          </div>
-          <div className="postBody">
-            <div className="leftBar"></div>
-            <div className="postImg">
-              <img src="../images/post2.png" alt="" />
-            </div>
-            <div className="rightBar"></div>
-          </div>
-          <div className="contents">
-            Consectetur explicabo sint, tenetur officia atque veniam quia iste nobis eius quos eveniet? Nisi eligendi exercitationem fuga accusantium
-            assumenda qui quibusdam voluptas.
-          </div>
-        </div>
+        {demo.map((item, idx) => {
+          return <Card data={item} />;
+        })}
       </div>
     </section>
   );

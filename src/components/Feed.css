@@ -1,3 +1,9 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 img {
   vertical-align: top;
 }
@@ -25,30 +31,7 @@ img {
   max-width: 600px;
 }
 
-.post {
-  margin-bottom: 30px;
-  border: 1px solid #031f41;
-  border-radius: 10px;
-}
-.post .postHeader {
-  display: flex;
-  align-items: center;
-  padding: 10px;
-  border-bottom: 1px solid #031f41;
-}
-.post .postHeader .profile {
-  margin-right: 10px;
-}
-.post .postHeader .profile img {
-  width: 50px;
-}
-.post .postBody {
-  background-color: #031f41;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.post .contents {
+.contents {
   padding: 10px;
   border-top: 1px solid #031f41;
   text-align: left;

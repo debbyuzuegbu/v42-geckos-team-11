@@ -1,27 +1,42 @@
-import "./Feed.css";
+import "./css/Feed.css";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import { Navigation, Mousewheel } from "swiper";
 import Card from "./UI/Card";
+import { useState, useCallback, useEffect } from "react";
 
 export default function Feed() {
-  const demo = [
-    {
-      profileImg: "../images/icons/profile.jpg",
-      userID: "Evelyn Jonas",
-      locaation: "somewhere",
-      cardImg: "../images/post1.png",
-      contents: "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
-    },
-    {
-      profileImg: "../images/icons/profile.jpg",
-      userID: "Evelyn Jonas",
-      locaation: "somewhere",
-      cardImg: "../images/post2.png",
-      contents:
-        "Consectetur explicabo sint, tenetur officia atque veniam quia iste nobis eius quos eveniet? Nisi eligendi exercitationem fuga accusantiumassumenda qui quibusdam voluptas.",
-    },
-  ];
+  const [feed, setFeed] = useState([]);
+
+  const fetchPostData = useCallback(async () => {
+    try {
+      const response = await fetch("https://geckos-11-default-rtdb.firebaseio.com/feed.json");
+      if (!response.ok) {
+        throw new Error("Something went wrong!");
+      }
+
+      const data = await response.json();
+
+      const loadedPost = [];
+      for (const key in data) {
+        loadedPost.push({
+          id: key,
+          profileImg: data[key].profileImg,
+          userID: data[key].userID,
+          location: data[key].location,
+          cardImg: data[key].cardImg,
+          contents: data[key].contents,
+        });
+      }
+      setFeed(loadedPost);
+    } catch (error) {
+      console.log(error);
+    }
+  }, []);
+
+  useEffect(() => {
+    fetchPostData();
+  }, [fetchPostData]);
 
   return (
     <section id="mainFeed">
@@ -59,7 +74,7 @@ export default function Feed() {
       </Swiper>
 
       <div className="container">
-        {demo.map((item, idx) => {
+        {feed.map((item, idx) => {
           return <Card data={item} />;
         })}
       </div>

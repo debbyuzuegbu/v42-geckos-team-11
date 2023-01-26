@@ -6,3 +6,9 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+:root {
+  --blue: #031F41;
+  --lightblue: #A4BFD8;
+}
+

@@ -1,4 +1,4 @@
-import "./css/Feed.css";
+import "./Feed.css";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import { Navigation, Mousewheel } from "swiper";

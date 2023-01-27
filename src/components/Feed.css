@@ -42,3 +42,17 @@ img {
     margin: 5vw;
   }
 }
+
+.tempBtn {
+  width: 100%;
+  padding: 10px;
+  background-color: #a4bfd8;
+  color: #031f41;
+  border: none;
+  margin-bottom: 50px;
+}
+
+.tempBtn:hover {
+  background-color: #031f41;
+  color: #a4bfd8;
+}

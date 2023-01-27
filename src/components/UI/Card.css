@@ -15,6 +15,9 @@
 .card .cardHeader .profile img {
   width: 50px;
 }
+.card .cardHeader .location {
+  font-size: 12px;
+}
 .card .cardBody {
   display: flex;
   justify-content: center;

@@ -3,6 +3,7 @@ import "./App.css";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Feed from "./components/Feed";
 import NewPost from "./components/NewPost";
+import Profile from './components/Profile';
 import "./Styles/newPost.css"
 
 function App() {
@@ -14,10 +15,11 @@ function App() {
         {/* <Header /> */}
         <Routes>
           <Route path="/feed" element={<Feed />} />
+          <Route path="/profile" element={<Profile />} />
         </Routes>
         {/* <Footer /> */}
       </BrowserRouter>
-      <NewPost />
+      {/* <NewPost /> */}
     </div>
   );
 }

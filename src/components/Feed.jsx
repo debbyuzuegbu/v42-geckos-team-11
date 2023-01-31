@@ -3,6 +3,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import { Navigation, Mousewheel } from "swiper";
 import Card from "./UI/Card";
+import { Link } from "react-router-dom";
 import { useState, useCallback, useEffect } from "react";
 
 export default function Feed() {
@@ -74,8 +75,11 @@ export default function Feed() {
       </Swiper>
 
       <div className="container">
+        <Link to="/new">
+          <button className="tempBtn">New Post</button>
+        </Link>
         {feed.map((item, idx) => {
-          return <Card data={item} />;
+          return <Card data={item} key={item.id} />;
         })}
       </div>
     </section>

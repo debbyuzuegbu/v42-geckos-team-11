@@ -2,7 +2,9 @@ import "./App.css";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Feed from "./components/Feed";
 import NewPost from "./components/NewPost";
-import "./Styles/newPost.css";
+import Profile from './components/Profile';
+import "./Styles/newPost.css"
+
 
 function App() {
   return (
@@ -10,11 +12,14 @@ function App() {
       <BrowserRouter>
         {/* <Header /> */}
         <Routes>
-          <Route path="/" element={<Feed />} />
+          <Route path="/feed" element={<Feed />} />
+          <Route path="/profile" element={<Profile />} />
           <Route path="/new" element={<NewPost />} />
         </Routes>
         {/* <Footer /> */}
       </BrowserRouter>
+      {/* <NewPost /> */}
+
     </div>
   );
 }

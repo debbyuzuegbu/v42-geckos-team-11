@@ -4,20 +4,25 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Feed from "./components/Feed";
 import NewPost from "./components/NewPost";
 import "./Styles/newPost.css"
+import Header from "./components/Header";
+import About from "./components/About"
+import Footer from "./components/Footer"
 
 function App() {
-  const [count, setCount] = useState(0);
 
   return (
-    <div className="App">
+    <div className="app">
       <BrowserRouter>
-        {/* <Header /> */}
-        <Routes>
-          <Route path="/feed" element={<Feed />} />
-        </Routes>
-        {/* <Footer /> */}
+        <Header />
+        <main className="container routes">
+          <Routes>
+            <Route path="/feed" element={<Feed />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/about" element={<NewPost />} />
+          </Routes>
+        </main>
+        <Footer />
       </BrowserRouter>
-      <NewPost />
     </div>
   );
 }

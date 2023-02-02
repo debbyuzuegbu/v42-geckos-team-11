@@ -9,8 +9,10 @@ export default function Card(props) {
         <div className="profile">
           <img src={profileImg} alt="" />
         </div>
-        <div className="userID">{userID}</div>
-        <div className="location">{location}</div>
+        <div>
+          <div className="userID">{userID}</div>
+          <div className="location">{location}</div>
+        </div>
       </div>
       <div className="cardBody">
         <div className="leftBar"></div>

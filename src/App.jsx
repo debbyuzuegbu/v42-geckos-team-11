@@ -4,21 +4,24 @@ import Feed from "./components/Feed";
 import NewPost from "./components/NewPost";
 import Profile from './components/Profile';
 import "./Styles/newPost.css"
-
+import Header from "./components/Header";
+import About from "./components/About"
+import Footer from "./components/Footer"
 
 function App() {
   return (
-    <div className="App">
+    <div className="app">
       <BrowserRouter>
-        {/* <Header /> */}
-        <Routes>
-          <Route path="/feed" element={<Feed />} />
-          <Route path="/profile" element={<Profile />} />
-          <Route path="/new" element={<NewPost />} />
-        </Routes>
-        {/* <Footer /> */}
+        <Header />
+        <main className="container routes">
+          <Routes>
+            <Route path="/feed" element={<Feed />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/about" element={<NewPost />} />
+          </Routes>
+        </main>
+        <Footer />
       </BrowserRouter>
-      {/* <NewPost /> */}
 
     </div>
   );

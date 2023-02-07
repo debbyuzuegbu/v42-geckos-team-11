@@ -1,0 +1,36 @@
+.card {
+  margin-bottom: 30px;
+  border: 1px solid #031f41;
+  border-radius: 10px;
+}
+.card .cardHeader {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #031f41;
+}
+.card .cardHeader .profile {
+  margin-right: 10px;
+}
+.card .cardHeader .profile img {
+  width: 50px;
+}
+.card .cardHeader .location {
+  font-size: 12px;
+}
+.card .cardBody {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #031f41;
+}
+.card .cardBody .cardImg img {
+  width: 65vw;
+  object-fit: contain;
+  max-width: 450px;
+}
+.card .contents {
+  padding: 10px;
+  border-top: 1px solid #031f41;
+  text-align: left;
+}

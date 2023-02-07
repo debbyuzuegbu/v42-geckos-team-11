@@ -1,0 +1,166 @@
+body {
+  color: var(--blue);
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.fileLabel,
+.upload-form {
+  flex-direction: column;
+}
+
+input[type=file] {
+  display: none;
+}
+
+.newpost-container,
+.upload-form {
+  width: 80%;
+}
+
+.upload-form {
+    margin: 0 auto;
+}
+
+.upload-form p {
+    font-size: .8rem;
+    margin: .5em 0;
+    align-self: flex-start;
+}
+
+.newpost-container {
+    height: 100vh;
+    margin: 2em auto;
+}
+
+.postData,
+.upload-form,
+.fileLabel, .nav {
+  display: flex;
+}
+
+.upload-form,
+.fileLabel, .nav {
+  align-items: center;
+}
+
+.image-box, .postBtn,
+textarea, .select {
+  padding: 1em;
+}
+
+.image-box {
+  border: 1px dashed blue;
+}
+
+.postBtn {
+  background-color: var(--lightblue);
+  border: 0;
+  font-weight: 900;
+  width: 50%;
+  margin: 1em auto;
+}
+
+::placeholder {
+  color: var(--lightblue);
+}
+
+.image-box, textarea,
+button, .newImage,
+.select {
+  border-radius: 10px;
+}
+
+button, .image-box,
+.select {
+  cursor: pointer;
+}
+
+.postData,
+.nav {
+  justify-content: space-between;
+}
+
+.select {
+  width: 60%;
+}
+
+.imageData {
+  width: 55%;
+}
+
+.filterData {
+  width: 42%;
+  padding: 1em .5em;
+}
+
+textarea, .image-box,
+.newImage, .sliders,
+.select {
+  width: 100%;
+  margin: .8em 0;
+}
+
+.uploaded-image {
+  width: 90%;
+  margin: 0 auto;
+}
+
+label {
+  width: 30%;
+}
+
+input[type=range] {
+  width: 65%;
+}
+
+.sliders {
+  padding: .5em 0;
+}
+
+.nav {
+  margin-bottom: 1em;
+}
+
+.navLink {
+  padding: .5em;
+  margin: 0;
+  font-weight: 700;
+  border-bottom: 2px solid var(--blue);
+}
+
+.select:hover,
+.select:focus,
+.postBtn:hover,
+.postBtn:focus {
+  background-color: var(--blue);
+  color: var(--lightblue);
+}
+
+@media (max-width: 600px) {
+    .newpost-container {
+        width: 95%;
+    }
+
+    .postData {
+        flex-direction: column;
+    }
+
+    .filterData {
+        width: 80%;
+        margin: .5em auto;
+    }
+
+    .imageData {
+        width: 100%;
+    }
+
+    .postBtn {
+        width: 60%;
+    }
+
+    .post-title {
+        text-align: center;
+        margin: .8em 0;
+    }
+}

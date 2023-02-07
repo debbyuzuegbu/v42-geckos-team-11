@@ -1,13 +1,280 @@
-body {
+*,
+::after,
+::before {
+  list-style: none;
+  padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  text-decoration: none;
+  box-sizing: border-box;
+  /* outline: solid green 1px; */
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+:root {
+  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  --primary-color: rgba(3, 31, 65, 1);
+  --nav: #d9d9d9;
+  --light-blue: #a4bfd8;
+  --line: #2C74B3;
+  line-height: 1.6;
+  font-family: "Inter", sans-serif;
+  /* font-family: "Merriweather", serif; */
+  font-family: "Urbanist", sans-serif;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+a{ color : var(--primary-color)}
+
+h1,
+h2,
+h5,
+p,
+small {
+  padding: 0;
+  margin: 0;
+}
+
+.app {
+  display: grid;
+  gap: 2em;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 90%;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.activeClass {
+  color: #fff;
+  background-color: var(--primary-color);
+  padding: 0.5rem 1rem;
+  border-radius: 50px;
+  transition: all 0.5s linear 0.2s;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  border-bottom: solid 5px var(--primary-color);
+  padding-top: 1em;
+  padding-bottom: 0.5rem;
+}
+
+.hamburger {
+  position: relative;
+  display: none;
+}
+
+.logo {
+  background-color: var(--light-blue);
+  padding: 0.5rem 1.5rem;
+  font-weight: 600;
+  border-radius: 50px;
+  box-shadow: 1px 1px 2px var(--primary-color);
+}
+
+.nav-items {
+  display: flex;
+}
+
+/* About and Feature*/
+.about {
+  display: grid;
+  gap: 4em;
+}
+
+.about-hero-text {
+  text-align: center;
+}
+
+.about-feature {
+  display: flex;
+  flex-direction: column;
+  gap: 3em;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.feature-card {
+  width: 100%;
+  border: 1px solid var(--primary-color);
+}
+
+.feature-user,
+.feature-caption {
+  padding: 1em;
+  display: flex;
+  gap: 1em;
+  align-items: center;
+}
+
+.user-thumbnail {
+  border-radius: 50%;
+  box-shadow: 1px 1px 2px black;
+}
+
+.user {
+  display: flex;
+  flex-direction: column;
+}
+
+.feature-img {
+  padding: 0 1em;
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+  background-color: var(--primary-color);
+}
+
+.reactions {
+  display: flex;
+  flex-direction: column;
+  gap: 3em;
+  align-items: center;
+  justify-content: center;
+}
+
+/* .reactions img {
+  width: 75%;
+} */
+
+/* .feature-main-img {
+  width: 75%;
+} */
+
+.feature-main-img img {
+  width: 100%;
+  min-height: 100%;
+  object-fit: cover;
+}
+
+.feature-text {
+  display: grid;
+  gap: 1em;
+  max-width: 100%;
+}
+
+.dev {
+  display: flex;
+  gap: 1em;
+  align-items: center;
+}
+
+.dev h5 {
+  width: 30%;
+}
+
+.icons {
+  display: flex;
+  gap: 1em;
+}
+
+.footer {
+  background-color: var(--light-blue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2em;
+}
+
+
+
+@media screen and (max-width: 1024px) {
+  .nav-items {
+    top: 0;
+    right: -80%;
+    position: fixed;
+    flex-direction: column;
+    align-items: center;
+    gap: 4em;
+    padding: 5em;
+    width: 80%;
+    min-height: 100%;
+    background: var(--nav);
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  /* About and Feature */
+
+  .feature-img {
+    min-height: 200px;
+  }
+
+  .user-thumbnail {
+    width: 13%;
+  }
+
+  .reactions img {
+    width: 24px;
+  }
+}
+
+.slide-in {
+  transform: translateX(-100%);
+  transition: all 0.5s ease-in-out 0.4s;
+}
+
+.slide-out {
+  transform: translateX(0%);
+  transition: all 0.5s ease-in-out 0.4s;
+}
+
+@media screen and (max-width: 1180px) {
+  
+}
+
+
+
+@media screen and (min-width: 1060px) {
+  .nav-items {
+    display: flex;
+    justify-content: space-between;
+    /* align-items: baseline; */
+    width: 100%;
+  }
+
+  .nav {
+    align-self: baseline;
+  }
+  .nav-div {
+    width: 50%;
+  }
+
+  /* About  and Feature*/
+  .about-feature {
+    flex-direction: row;
+    gap: 5em;
+  }
+
+  .about-feature-2 {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+
+  .feature-card {
+    width: 50%;
+  }
+
+  .user-thumbnail {
+    width: 10%;
+  }
+
+  .feature-img {
+    width: 100%;
+  }
+
+  .feature-text {
+    max-width: 50%;
+  }
 }
